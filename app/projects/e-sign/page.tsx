@@ -1,12 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useT } from "@/lib/i18n";
+import { Reveal } from "@/components/Reveal";
 import { TechBadge } from "@/components/TechBadge";
 import { Placeholder } from "@/components/Placeholder";
-
-export const metadata = {
-  title: "E-Sign — Nut",
-  description:
-    "End-to-end PDF e-signature workflow with drag-and-drop signature placement, JWT auth, and AWS S3 storage.",
-};
 
 const frontendStack = [
   "Next.js 16",
@@ -17,144 +15,107 @@ const frontendStack = [
   "react-pdf",
   "react-signature-canvas",
   "react-draggable",
-  "Framer Motion",
   "Axios",
 ];
 
 const backendStack = [
   "NestJS 11",
   "MySQL · TypeORM",
-  "JWT · Passport (local + jwt)",
-  "AWS S3 (presigned URLs)",
+  "JWT · Passport",
+  "AWS S3 · presigned URLs",
   "pdf-lib + @pdf-lib/fontkit",
   "Multer",
-  "Nodemailer / @nestjs-modules/mailer",
+  "Nodemailer",
 ];
 
 export default function ESignCaseStudy() {
+  const { t } = useT();
+
   return (
-    <div className="mx-auto max-w-4xl px-6 py-16">
+    <div className="mx-auto max-w-4xl px-4 py-16 md:px-6">
       <Link
         href="/#projects"
-        className="font-mono text-xs text-zinc-500 hover:text-[var(--accent)]"
+        className="font-mono text-xs text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
       >
-        ← back to projects
+        {t("backToProjects")}
       </Link>
 
-      <header className="mt-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-[var(--accent)]">
-          Case study · 2026
+      <Reveal as="header" className="mt-6">
+        <p className="font-mono text-xs uppercase tracking-widest text-[var(--primary)]">
+          {t("caseStudy")}
         </p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          E-Sign
+        <h1 className="mt-3 text-4xl font-bold tracking-tighter text-[var(--foreground)] sm:text-5xl">
+          {t("esTitle")}
         </h1>
-        <p className="mt-4 text-lg text-zinc-300">
-          A self-serve PDF e-signature workflow. Upload a document, draw your
-          signature, drag it onto the right page, and download a real signed PDF
-          — no third-party signing service in the loop.
+        <p className="mt-4 text-base leading-relaxed text-[var(--muted-foreground)] md:text-lg">
+          {t("esHero")}
         </p>
-      </header>
+      </Reveal>
 
-      <div className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)]">
+      <Reveal delay={0.05} className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
         <div className="aspect-[16/9]">
-          <Placeholder label="E-Sign · signing canvas" from="#0f172a" to="#000000" />
+          <Placeholder label="E-Sign · signing canvas" from="#e0e7ff" to="#cffafe" />
         </div>
-      </div>
+      </Reveal>
 
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold text-white">What it does</h2>
-        <ul className="mt-4 space-y-3 text-zinc-300">
-          <li>
-            <span className="text-white">Auth flow</span> — register, login,
-            forgot password, reset password. JWT issued by NestJS, persisted in
-            an HTTP cookie via <code className="font-mono text-xs">js-cookie</code> on
-            the client. Passport local + JWT strategies on the backend.
-          </li>
-          <li>
-            <span className="text-white">Document upload</span> — files go
-            through Multer in NestJS and are stored in AWS S3. Presigned URLs
-            (<code className="font-mono text-xs">@aws-sdk/s3-request-presigner</code>)
-            keep documents private but accessible to the owner.
-          </li>
-          <li>
-            <span className="text-white">Sign step</span> —{" "}
-            <code className="font-mono text-xs">react-pdf</code> renders the
-            document,{" "}
-            <code className="font-mono text-xs">react-signature-canvas</code>{" "}
-            captures the signature image, and{" "}
-            <code className="font-mono text-xs">react-draggable</code> lets
-            users place it anywhere on the page.
-          </li>
-          <li>
-            <span className="text-white">Real signing</span> — the backend
-            re-opens the PDF with{" "}
-            <code className="font-mono text-xs">pdf-lib</code> +{" "}
-            <code className="font-mono text-xs">@pdf-lib/fontkit</code>, embeds
-            the signature image at the requested coordinates, and writes a new
-            PDF back to S3.
-          </li>
-          <li>
-            <span className="text-white">Email notifications</span> for
-            password reset and signing events via the NestJS mailer module.
-          </li>
+      <Reveal delay={0.1} as="section" className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+          {t("whatItDoes")}
+        </h2>
+        <ul className="mt-4 space-y-3">
+          {t("esFeatures").map((f, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary)]" />
+              <span className="text-[var(--muted-foreground)]">{f}</span>
+            </li>
+          ))}
         </ul>
+      </Reveal>
+
+      <section className="mt-12 grid gap-6 sm:grid-cols-2">
+        {[
+          { title: t("frontend"), desc: t("esFrontendDesc"), stack: frontendStack },
+          { title: t("backend"), desc: t("esBackendDesc"), stack: backendStack },
+        ].map((b, i) => (
+          <Reveal delay={i * 0.05} key={b.title}>
+            <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
+              <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--muted-foreground)]">
+                {b.title}
+              </h3>
+              <p className="mt-2 text-sm text-[var(--muted-foreground)]">{b.desc}</p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {b.stack.map((s) => (
+                  <TechBadge key={s}>{s}</TechBadge>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </section>
 
-      <section className="mt-12 grid gap-8 sm:grid-cols-2">
-        <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">
-            Frontend
-          </h3>
-          <p className="mt-2 text-sm text-zinc-400">
-            Next.js App Router. Public auth pages plus an authenticated{" "}
-            <code className="font-mono text-xs">(system)</code> group with the
-            signing workspace.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {frontendStack.map((s) => (
-              <TechBadge key={s}>{s}</TechBadge>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">
-            Backend
-          </h3>
-          <p className="mt-2 text-sm text-zinc-400">
-            NestJS modules: <code className="font-mono text-xs">auth</code>,{" "}
-            <code className="font-mono text-xs">users</code>,{" "}
-            <code className="font-mono text-xs">documents</code>. MySQL via
-            TypeORM. S3 for blobs, pdf-lib for actual signing.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {backendStack.map((s) => (
-              <TechBadge key={s}>{s}</TechBadge>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold text-white">Frontend preview</h2>
-        <p className="mt-2 text-sm text-zinc-400">
-          Source is private; placeholders shown for the main screens.
+      <Reveal as="section" className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+          {t("frontendPreview")}
+        </h2>
+        <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+          {t("sourcePrivate")}
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
-            ["Login", "#0f172a", "#000000"],
-            ["Register", "#1e293b", "#000000"],
-            ["Document list", "#020617", "#0f172a"],
-            ["Sign canvas · drag & drop", "#0c4a6e", "#000000"],
+            ["Login", "#dbeafe", "#ede9fe"],
+            ["Register", "#e0e7ff", "#ddd6fe"],
+            ["Document list", "#cffafe", "#dbeafe"],
+            ["Sign canvas · drag & drop", "#fce7f3", "#e0e7ff"],
           ].map(([label, from, to]) => (
             <div
               key={label}
-              className="overflow-hidden rounded-xl border border-[var(--border)] aspect-[16/10]"
+              className="overflow-hidden rounded-xl border border-[var(--border)] aspect-[16/10] shadow-sm"
             >
               <Placeholder label={label} from={from} to={to} />
             </div>
           ))}
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 }

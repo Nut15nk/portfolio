@@ -1,12 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useT } from "@/lib/i18n";
+import { Reveal } from "@/components/Reveal";
 import { TechBadge } from "@/components/TechBadge";
 import { Placeholder } from "@/components/Placeholder";
-
-export const metadata = {
-  title: "BlackDiamond — Nut",
-  description:
-    "VIP forex signals platform with Stripe/PayPal billing and Telegram + Discord bots that grant or revoke access automatically.",
-};
 
 const frontendStack = [
   "Next.js 16",
@@ -17,15 +15,15 @@ const frontendStack = [
   "Radix UI",
   "Framer Motion",
   "Stripe.js",
-  "@paypal/react-paypal-js",
+  "PayPal",
 ];
 
 const backendStack = [
   "NestJS 11",
-  "MongoDB (Mongoose)",
-  "Redis (cache + sessions)",
+  "MongoDB · Mongoose",
+  "Redis · cache + session",
   "Stripe API",
-  "Resend (email)",
+  "Resend · email",
   "Cloudinary",
   "Helmet · Throttler",
 ];
@@ -38,141 +36,94 @@ const botStack = [
 ];
 
 export default function BlackDiamondCaseStudy() {
+  const { t } = useT();
+
   return (
-    <div className="mx-auto max-w-4xl px-6 py-16">
+    <div className="mx-auto max-w-4xl px-4 py-16 md:px-6">
       <Link
         href="/#projects"
-        className="font-mono text-xs text-zinc-500 hover:text-[var(--accent)]"
+        className="font-mono text-xs text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
       >
-        ← back to projects
+        {t("backToProjects")}
       </Link>
 
-      <header className="mt-6">
-        <p className="font-mono text-xs uppercase tracking-widest text-[var(--accent)]">
-          Case study · 2026
+      <Reveal as="header" className="mt-6">
+        <p className="font-mono text-xs uppercase tracking-widest text-[var(--primary)]">
+          {t("caseStudy")}
         </p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          BlackDiamond
+        <h1 className="mt-3 text-4xl font-bold tracking-tighter text-[var(--foreground)] sm:text-5xl">
+          {t("bdTitle")}
         </h1>
-        <p className="mt-4 text-lg text-zinc-300">
-          A subscription-based VIP forex signals platform. Users buy plans, the
-          system grants them VIP access in Telegram/Discord automatically, then
-          revokes it the moment a plan ends.
+        <p className="mt-4 text-base leading-relaxed text-[var(--muted-foreground)] md:text-lg">
+          {t("bdHero")}
         </p>
-      </header>
+      </Reveal>
 
-      <div className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)]">
+      <Reveal delay={0.05} className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
         <div className="aspect-[16/9]">
-          <Placeholder label="BlackDiamond · landing" from="#1e1b4b" to="#000000" />
+          <Placeholder label="BlackDiamond · landing" from="#dbeafe" to="#ede9fe" />
         </div>
-      </div>
+      </Reveal>
 
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold text-white">What it does</h2>
-        <ul className="mt-4 space-y-3 text-zinc-300">
-          <li>
-            <span className="text-white">VIP plan billing</span> via Stripe and
-            PayPal — checkout flow with subscriptions, success/failure handling,
-            invoice + receipt email through Resend.
-          </li>
-          <li>
-            <span className="text-white">Auto access management</span> — the
-            NestJS backend exposes <code className="font-mono text-xs">/trigger-grant</code>{" "}
-            and <code className="font-mono text-xs">/trigger-revoke</code>{" "}
-            endpoints. Python bots pick these up and add or kick the user from
-            the Telegram VIP group and the Discord VIP role in real time. A
-            periodic poll is a safety net.
-          </li>
-          <li>
-            <span className="text-white">Broker submissions</span> for Exness
-            and XM — users link broker accounts to unlock free tiers.
-          </li>
-          <li>
-            <span className="text-white">Affiliate / IB program</span> with
-            referrals, plus admin tools for orders, signals, partnerships, and
-            maintenance windows.
-          </li>
-          <li>
-            <span className="text-white">Multi-language frontend</span> using
-            Next.js{" "}
-            <code className="font-mono text-xs">app/[lang]</code> routing.
-          </li>
-          <li>
-            <span className="text-white">Message bridge</span> — text messages
-            from the Telegram VIP and Free groups are forwarded to Discord
-            channels in real time.
-          </li>
+      <Reveal delay={0.1} as="section" className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+          {t("whatItDoes")}
+        </h2>
+        <ul className="mt-4 space-y-3 text-[var(--foreground)]">
+          {t("bdFeatures").map((f, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary)]" />
+              <span className="text-[var(--muted-foreground)]">{f}</span>
+            </li>
+          ))}
         </ul>
+      </Reveal>
+
+      <section className="mt-12 grid gap-6 sm:grid-cols-3">
+        {[
+          { title: t("frontend"), desc: t("bdFrontendDesc"), stack: frontendStack },
+          { title: t("backend"), desc: t("bdBackendDesc"), stack: backendStack },
+          { title: t("bots"), desc: t("bdBotsDesc"), stack: botStack },
+        ].map((b, i) => (
+          <Reveal delay={i * 0.05} key={b.title}>
+            <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
+              <h3 className="font-mono text-xs uppercase tracking-widest text-[var(--muted-foreground)]">
+                {b.title}
+              </h3>
+              <p className="mt-2 text-sm text-[var(--muted-foreground)]">{b.desc}</p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {b.stack.map((s) => (
+                  <TechBadge key={s}>{s}</TechBadge>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </section>
 
-      <section className="mt-12 grid gap-8 sm:grid-cols-3">
-        <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">
-            Frontend
-          </h3>
-          <p className="mt-2 text-sm text-zinc-400">
-            Next.js App Router with i18n, server components for marketing
-            pages, client islands for checkout and animations.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {frontendStack.map((s) => (
-              <TechBadge key={s}>{s}</TechBadge>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">
-            Backend
-          </h3>
-          <p className="mt-2 text-sm text-zinc-400">
-            NestJS modules for auth, products, cart, orders, payment, signals,
-            affiliate/IB, broker submissions, mail, admin, and bot triggers.
-            Throttled and helmeted.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {backendStack.map((s) => (
-              <TechBadge key={s}>{s}</TechBadge>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">
-            Bots
-          </h3>
-          <p className="mt-2 text-sm text-zinc-400">
-            Two Python services. Each listens on aiohttp endpoints called by
-            NestJS, plus polls the backend on a timer as a safety net.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {botStack.map((s) => (
-              <TechBadge key={s}>{s}</TechBadge>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold text-white">Frontend preview</h2>
-        <p className="mt-2 text-sm text-zinc-400">
-          A few of the public pages — landing, VIP plans, broker linking,
-          checkout. Source is private; placeholders shown here.
+      <Reveal as="section" className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+          {t("frontendPreview")}
+        </h2>
+        <p className="mt-2 text-sm text-[var(--muted-foreground)]">
+          {t("sourcePrivate")}
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
-            ["Landing · /[lang]", "#1e1b4b", "#000000"],
-            ["Plans · /[lang]/plans", "#172554", "#000000"],
-            ["Checkout · Stripe + PayPal", "#3b0764", "#000000"],
-            ["Brokers · Exness / XM linking", "#0f172a", "#000000"],
+            ["Landing · /[lang]", "#dbeafe", "#ede9fe"],
+            ["Plans · /[lang]/plans", "#e0e7ff", "#ddd6fe"],
+            ["Checkout · Stripe + PayPal", "#fce7f3", "#dbeafe"],
+            ["Brokers · Exness / XM", "#cffafe", "#e0e7ff"],
           ].map(([label, from, to]) => (
             <div
               key={label}
-              className="overflow-hidden rounded-xl border border-[var(--border)] aspect-[16/10]"
+              className="overflow-hidden rounded-xl border border-[var(--border)] aspect-[16/10] shadow-sm"
             >
               <Placeholder label={label} from={from} to={to} />
             </div>
           ))}
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 }
