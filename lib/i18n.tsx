@@ -70,7 +70,7 @@ export const strings = {
     heroEyebrow: "Full-stack Developer · ประเทศไทย",
     heroStatus: "เปิดรับงานใหม่",
     heroHi: "สวัสดีครับ ผมชื่อ",
-    heroName: "นัท",
+    heroName: "นัควัต จู",
     heroRoles: [
       "Full-stack Developer",
       "Next.js + NestJS Engineer",
@@ -78,7 +78,7 @@ export const strings = {
       "นักสร้างบอทอัตโนมัติ",
     ],
     heroDesc:
-      "ผมพัฒนาเว็บแอปจริงตั้งแต่ frontend ถึง backend สแตกที่ใช้บ่อยคือ Next.js + NestJS เคยฝึกงาน 9 เดือนที่ SGN ทำทั้งแอป Flutter เว็บ Next.js และวางระบบ CRM infrastructure จากนั้นพัฒนา BlackDiamond ขึ้นมาคนเดียวจนถึง production",
+      "ผมพัฒนาเว็บแอปจริงตั้งแต่ frontend ถึง backend สแตกที่ใช้บ่อยคือ Next.js + NestJS เคยฝึกงาน 9 เดือนที่ SGN ทำทั้งแอป Flutter เว็บ Next.js และวางระบบ CRM infrastructure",
     heroCtaProjects: "ดูผลงาน",
     heroCtaGithub: "GitHub",
 
@@ -100,7 +100,7 @@ export const strings = {
     aboutHeading: "เกี่ยวกับผม",
     aboutEyebrow: "About",
     aboutLocation: "ประเทศไทย · เปิดรับงาน",
-    aboutIntroHeading: "สวัสดีครับ ผมชื่อ นัท",
+    aboutIntroHeading: "สวัสดีครับ ผมชื่อ นัควัต จู",
     aboutBody:
       "ผมเป็น full-stack developer ที่เน้นส่งของจริงให้ใช้ได้ สแตกหลักตอนนี้คือ Next.js + NestJS บน TypeScript ใช้ MongoDB หรือ MySQL ฝั่ง backend, Redis สำหรับ cache/session นอกจากนี้ก็เขียนบอท Python เชื่อมระบบ (Telegram, Discord) และเคยทำเว็บฟูลสแตก PHP มาก่อน",
 
@@ -223,7 +223,7 @@ export const strings = {
     heroEyebrow: "Full-stack Developer · Thailand",
     heroStatus: "Open to work",
     heroHi: "Hi, I'm",
-    heroName: "Nut",
+    heroName: "Nakhawat Ju",
     heroRoles: [
       "Full-stack Developer",
       "Next.js + NestJS Engineer",
@@ -231,7 +231,7 @@ export const strings = {
       "Bot Automation Builder",
     ],
     heroDesc:
-      "I build production web apps end-to-end. My go-to stack is Next.js + NestJS. Spent 9 months interning at SGN — Flutter mobile, Next.js web and CRM infrastructure — then built the BlackDiamond platform solo, all the way to production.",
+      "I build production web apps end-to-end. My go-to stack is Next.js + NestJS. Spent 9 months interning at SGN — Flutter mobile, Next.js web and CRM infrastructure.",
     heroCtaProjects: "View my work",
     heroCtaGithub: "GitHub",
 
@@ -254,7 +254,7 @@ export const strings = {
     aboutHeading: "About me",
     aboutEyebrow: "About",
     aboutLocation: "Thailand · open to work",
-    aboutIntroHeading: "Hi, I'm Nut",
+    aboutIntroHeading: "Hi, I'm Nakhawat Ju",
     aboutBody:
       "I'm a full-stack developer focused on shipping real products. My recent stack is Next.js + NestJS on TypeScript, with MongoDB or MySQL on the backend, and Redis for caching/sessions. I also write Python bots to glue services together (Telegram, Discord) and have shipped PHP fullstack work before that.",
 

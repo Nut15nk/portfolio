@@ -21,9 +21,9 @@ const notoThai = Noto_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  title: "Nut — Full-stack Developer",
+  title: "Nakhawat Ju — Full-stack Developer",
   description:
-    "Portfolio ของ Nut (Nut15nk) — full-stack developer สร้างเว็บแอปจริงด้วย Next.js, NestJS และ TypeScript",
+    "Portfolio ของ Nakhawat Ju (Nut15nk) — full-stack developer สร้างเว็บแอปจริงด้วย Next.js, NestJS และ TypeScript",
 };
 
 export default function RootLayout({
