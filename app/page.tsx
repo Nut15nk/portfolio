@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
 import { RotatingText } from "@/components/RotatingText";
-import { Avatar } from "@/components/Avatar";
+import { CodeCard } from "@/components/CodeCard";
+import { StatusBadge } from "@/components/StatusBadge";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Placeholder } from "@/components/Placeholder";
-import { SkillTabs } from "@/components/SkillTabs";
+import { SkillsGrid } from "@/components/SkillsGrid";
 import { GithubIcon, MailIcon, ArrowRightIcon } from "@/components/Icons";
 
 export default function Home() {
@@ -20,32 +20,44 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary)]/10 blur-3xl" />
           <div className="absolute -left-10 bottom-10 h-96 w-96 rounded-full bg-[var(--secondary)]/10 blur-3xl" />
+          <div
+            className="absolute inset-0 opacity-[0.025]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, var(--foreground) 1px, transparent 1px)",
+              backgroundSize: "20px 20px",
+            }}
+          />
         </div>
 
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:px-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_460px]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:px-6 lg:grid-cols-[1fr_460px]">
           <div className="flex flex-col justify-center gap-6">
             <Reveal>
+              <StatusBadge>{t("heroStatus")}</StatusBadge>
+            </Reveal>
+
+            <Reveal delay={0.05}>
               <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--muted)] px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-[var(--muted-foreground)]">
                 {t("heroEyebrow")}
               </span>
             </Reveal>
 
-            <Reveal delay={0.05} as="h1" className="text-4xl font-bold tracking-tighter text-[var(--foreground)] sm:text-5xl xl:text-6xl/[1.05]">
+            <Reveal delay={0.1} as="h1" className="text-4xl font-bold tracking-tighter text-[var(--foreground)] sm:text-5xl xl:text-6xl/[1.05]">
               {t("heroHi")}{" "}
               <span className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
                 {t("heroName")}
               </span>
             </Reveal>
 
-            <Reveal delay={0.1} className="h-9 sm:h-10 text-2xl sm:text-3xl font-semibold text-[var(--primary)]">
+            <Reveal delay={0.15} className="h-9 sm:h-10 text-2xl sm:text-3xl font-semibold text-[var(--primary)]">
               <RotatingText items={t("heroRoles")} />
             </Reveal>
 
-            <Reveal delay={0.15} as="p" className="max-w-[620px] text-base leading-relaxed text-[var(--muted-foreground)] md:text-lg">
+            <Reveal delay={0.2} as="p" className="max-w-[620px] text-base leading-relaxed text-[var(--muted-foreground)] md:text-lg">
               {t("heroDesc")}
             </Reveal>
 
-            <Reveal delay={0.2} className="flex flex-wrap items-center gap-3">
+            <Reveal delay={0.25} className="flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
                 className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[var(--primary)] px-5 text-sm font-medium text-[var(--primary-foreground)] shadow-sm transition-all hover:bg-[var(--primary)]/90"
@@ -64,7 +76,7 @@ export default function Home() {
               </a>
             </Reveal>
 
-            <Reveal delay={0.25} className="flex items-center gap-2 pt-1">
+            <Reveal delay={0.3} className="flex items-center gap-2 pt-1">
               <a
                 href="https://github.com/Nut15nk"
                 target="_blank"
@@ -84,19 +96,17 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex items-center justify-center"
-          >
-            <Avatar />
-          </motion.div>
+          <div className="flex items-center justify-center lg:justify-end">
+            <CodeCard />
+          </div>
         </div>
       </section>
 
       {/* Featured projects */}
-      <section id="projects" className="border-y border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24">
+      <section
+        id="projects"
+        className="border-y border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24"
+      >
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <Reveal className="mb-10 flex flex-col items-center text-center">
             <h2 className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl md:text-5xl">
@@ -162,7 +172,7 @@ export default function Home() {
       {/* Skills */}
       <section id="skills" className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <Reveal className="mb-10 flex flex-col items-center text-center">
+          <Reveal className="mb-12 flex flex-col items-center text-center">
             <h2 className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl md:text-5xl">
               {t("skillsHeading")}
             </h2>
@@ -170,14 +180,15 @@ export default function Home() {
               {t("skillsSub")}
             </p>
           </Reveal>
-          <Reveal delay={0.1}>
-            <SkillTabs />
-          </Reveal>
+          <SkillsGrid />
         </div>
       </section>
 
       {/* About */}
-      <section id="about" className="border-t border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24">
+      <section
+        id="about"
+        className="border-t border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24"
+      >
         <div className="mx-auto grid max-w-6xl gap-10 px-4 md:px-6 md:grid-cols-[1fr_2fr]">
           <Reveal>
             <h2 className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
@@ -187,7 +198,11 @@ export default function Home() {
               {t("aboutLocation")}
             </p>
           </Reveal>
-          <Reveal delay={0.1} as="p" className="text-base leading-relaxed text-[var(--foreground)] md:text-lg">
+          <Reveal
+            delay={0.1}
+            as="p"
+            className="text-base leading-relaxed text-[var(--foreground)] md:text-lg"
+          >
             {t("aboutBody")}
           </Reveal>
         </div>

@@ -68,6 +68,7 @@ export const strings = {
     navGithub: "GitHub",
 
     heroEyebrow: "Full-stack Developer · ประเทศไทย",
+    heroStatus: "กำลังพัฒนา BlackDiamond + E-Sign",
     heroHi: "สวัสดีครับ ผมชื่อ",
     heroName: "นัท",
     heroRoles: [
@@ -153,6 +154,7 @@ export const strings = {
     navGithub: "GitHub",
 
     heroEyebrow: "Full-stack Developer · Thailand",
+    heroStatus: "Currently building BlackDiamond + E-Sign",
     heroHi: "Hi, I'm",
     heroName: "Nut",
     heroRoles: [
