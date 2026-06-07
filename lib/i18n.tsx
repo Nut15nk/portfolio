@@ -68,7 +68,7 @@ export const strings = {
     navGithub: "GitHub",
 
     heroEyebrow: "Full-stack Developer · ประเทศไทย",
-    heroStatus: "กำลังพัฒนา BlackDiamond + E-Sign",
+    heroStatus: "เปิดรับงานใหม่",
     heroHi: "สวัสดีครับ ผมชื่อ",
     heroName: "นัท",
     heroRoles: [
@@ -95,7 +95,7 @@ export const strings = {
     skillsTabLang: "ภาษา",
     skillsTabFront: "Frontend",
     skillsTabBack: "Backend",
-    skillsTabData: "Database / Cloud",
+    skillsTabData: "Database",
 
     aboutHeading: "เกี่ยวกับผม",
     aboutLocation: "ประเทศไทย · เปิดรับงาน",
@@ -154,7 +154,7 @@ export const strings = {
     navGithub: "GitHub",
 
     heroEyebrow: "Full-stack Developer · Thailand",
-    heroStatus: "Currently building BlackDiamond + E-Sign",
+    heroStatus: "Open to work",
     heroHi: "Hi, I'm",
     heroName: "Nut",
     heroRoles: [
@@ -182,7 +182,7 @@ export const strings = {
     skillsTabLang: "Languages",
     skillsTabFront: "Frontend",
     skillsTabBack: "Backend",
-    skillsTabData: "Database / Cloud",
+    skillsTabData: "Database",
 
     aboutHeading: "About",
     aboutLocation: "Thailand · open to work",

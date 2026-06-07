@@ -57,9 +57,6 @@ const groups: Group[] = [
       { name: "NestJS", si: "nestjs", color: "E0234E" },
       { name: "Node.js", si: "nodedotjs", color: "5FA04E" },
       { name: "Express", si: "express", color: "000000" },
-      { name: "JWT", si: "jsonwebtokens", color: "000000" },
-      { name: "TypeORM", si: "typeorm", color: "FE0902" },
-      { name: "Mongoose", si: "mongoose", color: "880000" },
     ],
   },
   {
@@ -68,10 +65,6 @@ const groups: Group[] = [
       { name: "MongoDB", si: "mongodb", color: "47A248" },
       { name: "MySQL", si: "mysql", color: "4479A1" },
       { name: "Redis", si: "redis", color: "FF4438" },
-      { name: "AWS S3", si: "amazons3", color: "569A31" },
-      { name: "Cloudinary", si: "cloudinary", color: "3448C5" },
-      { name: "Stripe", si: "stripe", color: "635BFF" },
-      { name: "PayPal", si: "paypal", color: "003087" },
     ],
   },
 ];
