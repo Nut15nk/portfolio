@@ -161,7 +161,8 @@ export const strings = {
 
     educationHeading: "การศึกษา",
     eduSchool: "มหาวิทยาลัยราชภัฏสงขลา",
-    eduStatus: "ปี 5 ภาคเรียนที่ 1 · คาดว่าจะจบในปี 2026",
+    eduMajor: "สาขาวิทยาการคอมพิวเตอร์",
+    eduStatus: "ปี 5 · คาดว่าจะจบในปี 2026",
     eduNote: "กำลังเรียนวิชาสุดท้ายก่อนจบ",
 
     githubHeading: "GitHub",
@@ -315,7 +316,8 @@ export const strings = {
 
     educationHeading: "Education",
     eduSchool: "Songkhla Rajabhat University",
-    eduStatus: "Year 5 · Term 1 · Expected graduation 2026",
+    eduMajor: "B.Sc. in Computer Science",
+    eduStatus: "Year 5 · Expected graduation 2026",
     eduNote: "Wrapping up the final subject before graduation.",
 
     githubHeading: "GitHub",

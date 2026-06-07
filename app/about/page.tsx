@@ -108,16 +108,19 @@ export default function AboutPage() {
           <Reveal as="h2" className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
             {t("educationHeading")}
           </Reveal>
-          <Reveal delay={0.05} className="mt-8 flex flex-col gap-3 rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+          <Reveal delay={0.05} className="mt-8 flex flex-col gap-3 rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm sm:flex-row sm:items-start sm:justify-between">
             <div>
               <h3 className="text-lg font-bold tracking-tight text-[var(--foreground)]">
                 {t("eduSchool")}
               </h3>
+              <p className="mt-1 text-sm font-medium text-[var(--primary)]">
+                {t("eduMajor")}
+              </p>
               <p className="mt-1 text-sm text-[var(--muted-foreground)]">
                 {t("eduNote")}
               </p>
             </div>
-            <span className="inline-flex w-fit items-center rounded-full border border-[var(--border)] bg-[var(--muted)]/50 px-3 py-1 font-mono text-[11px] text-[var(--muted-foreground)]">
+            <span className="inline-flex w-fit shrink-0 items-center rounded-full border border-[var(--border)] bg-[var(--muted)]/50 px-3 py-1 font-mono text-[11px] text-[var(--muted-foreground)] sm:mt-1">
               {t("eduStatus")}
             </span>
           </Reveal>
