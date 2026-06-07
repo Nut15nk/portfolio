@@ -46,10 +46,6 @@ const groups: Group[] = [
       { name: "Next.js", si: "nextdotjs", color: "000000" },
       { name: "Flutter", si: "flutter", color: "02569B" },
       { name: "Tailwind CSS", si: "tailwindcss", color: "06B6D4" },
-      { name: "Ant Design", si: "antdesign", color: "0170FE" },
-      { name: "shadcn/ui", si: "shadcnui", color: "000000" },
-      { name: "Radix UI", si: "radixui", color: "161618" },
-      { name: "Framer Motion", si: "framer", color: "0055FF" },
     ],
   },
   {
