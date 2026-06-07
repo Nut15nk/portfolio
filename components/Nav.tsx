@@ -37,7 +37,7 @@ export function Nav() {
             {t("navSkills")}
           </Link>
           <Link
-            href="/#about"
+            href="/about"
             className="hidden sm:inline hover:text-[var(--foreground)] transition-colors"
           >
             {t("navAbout")}

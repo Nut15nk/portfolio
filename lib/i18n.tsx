@@ -98,12 +98,59 @@ export const strings = {
     skillsTabData: "Database",
 
     aboutHeading: "เกี่ยวกับผม",
+    aboutEyebrow: "About",
     aboutLocation: "ประเทศไทย · เปิดรับงาน",
+    aboutIntroHeading: "สวัสดีครับ ผมชื่อ นัท",
     aboutBody:
-      "ผมเป็น full-stack developer ที่เน้นส่งของจริงให้ใช้ได้ สแตกหลักตอนนี้คือ Next.js + NestJS บน TypeScript ใช้ MongoDB หรือ MySQL ฝั่ง backend, Redis สำหรับ cache/session, และ Stripe หรือ PayPal สำหรับเก็บเงิน นอกจากนี้ก็เขียนบอท Python เชื่อมระบบ (Telegram, Discord) และเคยทำเว็บฟูลสแตก PHP มาก่อน",
+      "ผมเป็น full-stack developer ที่เน้นส่งของจริงให้ใช้ได้ สแตกหลักตอนนี้คือ Next.js + NestJS บน TypeScript ใช้ MongoDB หรือ MySQL ฝั่ง backend, Redis สำหรับ cache/session นอกจากนี้ก็เขียนบอท Python เชื่อมระบบ (Telegram, Discord) และเคยทำเว็บฟูลสแตก PHP มาก่อน",
+
+    focusHeading: "ตอนนี้โฟกัสกับ",
+    focusItems: [
+      {
+        title: "Production app",
+        body: "ส่งงานจริงใช้ได้ด้วย Next.js + NestJS + TypeScript",
+      },
+      {
+        title: "Scalable backend",
+        body: "ออกแบบระบบที่ scale ได้ — caching, queueing, third-party integration",
+      },
+      {
+        title: "Bot automation",
+        body: "เขียน Python bot เชื่อม Telegram / Discord กับระบบหลังบ้าน",
+      },
+    ],
+
+    journeyHeading: "เส้นทางของผม",
+    journey: [
+      {
+        year: "2023",
+        title: "เริ่มต้นเขียนโค้ด",
+        body: "เขียนโปรเจกต์แรกด้วย C — โปรแกรมคำนวณบิลค่าไฟ เรียนพื้นฐาน programming",
+      },
+      {
+        year: "2024",
+        title: "หัดทำเว็บ",
+        body: "เรียน HTML, CSS, JavaScript และ React ลองทำ auth flow ครั้งแรก (Login/Register + token)",
+      },
+      {
+        year: "2025",
+        title: "ฟูลสแตก mini projects",
+        body: "ทำโปรเจกต์ฟูลสแตกหลายตัว — POS, Kanban board, Bookshop API, Mini Culture และอื่นๆ",
+      },
+      {
+        year: "2026",
+        title: "Production work",
+        body: "ส่งงาน production จริง — BlackDiamond (VIP signals platform) และ E-Sign (PDF e-signing) ด้วย Next.js + NestJS เต็มตัว",
+      },
+    ],
+
+    githubHeading: "GitHub",
+    githubSub: "สถิติและภาษาที่ใช้บ่อยจาก commit history",
 
     contactHeading: "ติดต่อ",
     contactSub: "อยากทำงานร่วมกัน? ทักมาได้เลยครับ",
+    contactEmailLabel: "ส่งอีเมล",
+    contactGithubLabel: "ดู GitHub",
 
     backToProjects: "← กลับไปหน้าผลงาน",
     caseStudy: "Case study · 2026",
@@ -184,13 +231,60 @@ export const strings = {
     skillsTabBack: "Backend",
     skillsTabData: "Database",
 
-    aboutHeading: "About",
+    aboutHeading: "About me",
+    aboutEyebrow: "About",
     aboutLocation: "Thailand · open to work",
+    aboutIntroHeading: "Hi, I'm Nut",
     aboutBody:
-      "I'm a full-stack developer focused on shipping real products. My recent stack is Next.js + NestJS on TypeScript, with MongoDB or MySQL on the backend, Redis for caching/sessions, and Stripe or PayPal for billing. I also write Python bots to glue services together (Telegram, Discord) and have shipped PHP fullstack work before that.",
+      "I'm a full-stack developer focused on shipping real products. My recent stack is Next.js + NestJS on TypeScript, with MongoDB or MySQL on the backend, and Redis for caching/sessions. I also write Python bots to glue services together (Telegram, Discord) and have shipped PHP fullstack work before that.",
+
+    focusHeading: "Currently focused on",
+    focusItems: [
+      {
+        title: "Production apps",
+        body: "Shipping real-world products with Next.js + NestJS + TypeScript.",
+      },
+      {
+        title: "Scalable backends",
+        body: "Designing systems that scale — caching, queueing, third-party integrations.",
+      },
+      {
+        title: "Bot automation",
+        body: "Writing Python bots that bridge Telegram / Discord with backend services.",
+      },
+    ],
+
+    journeyHeading: "My journey",
+    journey: [
+      {
+        year: "2023",
+        title: "Started coding",
+        body: "First project in C — an electricity bill calculator. Learned programming fundamentals.",
+      },
+      {
+        year: "2024",
+        title: "Discovered the web",
+        body: "Picked up HTML, CSS, JavaScript and React. Built my first auth flow (login/register with token).",
+      },
+      {
+        year: "2025",
+        title: "Fullstack mini projects",
+        body: "Shipped fullstack mini projects — POS, Kanban board, Bookshop API, Mini Culture and more.",
+      },
+      {
+        year: "2026",
+        title: "Production work",
+        body: "Real production work — BlackDiamond (VIP signals platform) and E-Sign (PDF e-signing) on Next.js + NestJS.",
+      },
+    ],
+
+    githubHeading: "GitHub",
+    githubSub: "Stats and most-used languages from my commit history.",
 
     contactHeading: "Contact",
     contactSub: "Want to work together? Reach out.",
+    contactEmailLabel: "Send email",
+    contactGithubLabel: "View GitHub",
 
     backToProjects: "← back to projects",
     caseStudy: "Case study · 2026",

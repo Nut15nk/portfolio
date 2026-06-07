@@ -122,9 +122,7 @@ export default function Home() {
               <ProjectCard
                 slug="blackdiamond"
                 title="BlackDiamond"
-                tagline={t("bdTagline")}
                 year="2026"
-                viewDetailsLabel={t("viewDetails")}
                 cover={
                   <Placeholder
                     label="BlackDiamond · VIP Signals"
@@ -132,22 +130,13 @@ export default function Home() {
                     to="#ede9fe"
                   />
                 }
-                stack={[
-                  "Next.js 16",
-                  "NestJS",
-                  "MongoDB",
-                  "Stripe",
-                  "Python bots",
-                ]}
               />
             </Reveal>
             <Reveal delay={0.1}>
               <ProjectCard
                 slug="e-sign"
                 title="E-Sign"
-                tagline={t("esTagline")}
                 year="2026"
-                viewDetailsLabel={t("viewDetails")}
                 cover={
                   <Placeholder
                     label="E-Sign · PDF Signing"
@@ -155,14 +144,6 @@ export default function Home() {
                     to="#cffafe"
                   />
                 }
-                stack={[
-                  "Next.js 16",
-                  "Ant Design",
-                  "NestJS",
-                  "MySQL",
-                  "AWS S3",
-                  "pdf-lib",
-                ]}
               />
             </Reveal>
           </div>
@@ -181,30 +162,6 @@ export default function Home() {
             </p>
           </Reveal>
           <SkillsGrid />
-        </div>
-      </section>
-
-      {/* About */}
-      <section
-        id="about"
-        className="border-t border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24"
-      >
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 md:px-6 md:grid-cols-[1fr_2fr]">
-          <Reveal>
-            <h2 className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
-              {t("aboutHeading")}
-            </h2>
-            <p className="mt-3 font-mono text-xs uppercase tracking-widest text-[var(--muted-foreground)]">
-              {t("aboutLocation")}
-            </p>
-          </Reveal>
-          <Reveal
-            delay={0.1}
-            as="p"
-            className="text-base leading-relaxed text-[var(--foreground)] md:text-lg"
-          >
-            {t("aboutBody")}
-          </Reveal>
         </div>
       </section>
     </div>
