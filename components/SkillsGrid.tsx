@@ -44,6 +44,7 @@ const groups: Group[] = [
     items: [
       { name: "React", si: "react", color: "61DAFB" },
       { name: "Next.js", si: "nextdotjs", color: "000000" },
+      { name: "Flutter", si: "flutter", color: "02569B" },
       { name: "Tailwind CSS", si: "tailwindcss", color: "06B6D4" },
       { name: "Ant Design", si: "antdesign", color: "0170FE" },
       { name: "shadcn/ui", si: "shadcnui", color: "000000" },

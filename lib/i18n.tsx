@@ -78,7 +78,7 @@ export const strings = {
       "นักสร้างบอทอัตโนมัติ",
     ],
     heroDesc:
-      "ผมพัฒนาเว็บแอปจริงตั้งแต่ frontend ถึง backend ปัจจุบันกำลังส่งงานด้วย Next.js + NestJS — รวมถึงแพลตฟอร์มสัญญาณเทรด VIP ที่เก็บเงินผ่าน Stripe พร้อมบอท Telegram/Discord อัตโนมัติ และเว็บเซ็นเอกสาร PDF ที่ใช้ AWS S3 + pdf-lib",
+      "ผมพัฒนาเว็บแอปจริงตั้งแต่ frontend ถึง backend สแตกที่ใช้บ่อยคือ Next.js + NestJS เคยฝึกงาน 9 เดือนที่ SGN ทำทั้งแอป Flutter เว็บ Next.js และวางระบบ CRM infrastructure จากนั้นพัฒนา BlackDiamond ขึ้นมาคนเดียวจนถึง production",
     heroCtaProjects: "ดูผลงาน",
     heroCtaGithub: "GitHub",
 
@@ -134,15 +134,35 @@ export const strings = {
       },
       {
         year: "2025",
-        title: "ฟูลสแตก mini projects",
-        body: "ทำโปรเจกต์ฟูลสแตกหลายตัว — POS, Kanban board, Bookshop API, Mini Culture และอื่นๆ",
+        title: "ฟูลสแตก mini projects + เริ่มฝึกงาน",
+        body: "ทำโปรเจกต์ฟูลสแตกหลายตัว (POS, Kanban, Bookshop API) และเริ่มฝึกงานที่ Synergy Global Network (SGN) ในเดือนมิถุนายน",
       },
       {
         year: "2026",
-        title: "Production work",
-        body: "ส่งงาน production จริง — BlackDiamond (VIP signals platform) และ E-Sign (PDF e-signing) ด้วย Next.js + NestJS เต็มตัว",
+        title: "จบฝึกงาน + production work",
+        body: "จบฝึกงาน SGN เมื่อ 7 มี.ค. 2026 จากนั้นพัฒนา BlackDiamond ขึ้นมาเองคนเดียวจนกลายเป็น production และต่อด้วย E-Sign (PDF e-signing)",
       },
     ],
+
+    experienceHeading: "ประสบการณ์ทำงาน",
+    expCompany: "Synergy Global Network (SGN)",
+    expRole: "Full-stack Developer (Internship)",
+    expDuration: "มิ.ย. 2025 — 7 มี.ค. 2026 · 9 เดือน",
+    expProjects: [
+      {
+        title: "C-HAT V2",
+        body: "รับผิดชอบระบบดีไซน์ที่รองรับทุกหน้าจอ (responsive) พัฒนาและดูแลโมบายแอปพลิเคชันด้วย Flutter ควบคู่กับเว็บแอปด้วย Next.js",
+      },
+      {
+        title: "CRM Customer Service System",
+        body: "ออกแบบและวางระบบโครงสร้างพื้นฐาน (infrastructure setup) สำหรับระบบ CRM เพื่อรองรับงานบริการลูกค้าที่ซับซ้อน",
+      },
+    ],
+
+    educationHeading: "การศึกษา",
+    eduSchool: "มหาวิทยาลัยราชภัฏสงขลา",
+    eduStatus: "ปี 5 ภาคเรียนที่ 1 · คาดว่าจะจบในปี 2026",
+    eduNote: "กำลังเรียนวิชาสุดท้ายก่อนจบ",
 
     githubHeading: "GitHub",
     githubSub: "สถิติและภาษาที่ใช้บ่อยจาก commit history",
@@ -211,7 +231,7 @@ export const strings = {
       "Bot Automation Builder",
     ],
     heroDesc:
-      "I build production web apps end-to-end. Currently shipping with Next.js + NestJS — including a VIP forex signals platform with Stripe payments + Telegram/Discord automation, and a PDF e-signature workflow backed by AWS S3 and pdf-lib.",
+      "I build production web apps end-to-end. My go-to stack is Next.js + NestJS. Spent 9 months interning at SGN — Flutter mobile, Next.js web and CRM infrastructure — then built the BlackDiamond platform solo, all the way to production.",
     heroCtaProjects: "View my work",
     heroCtaGithub: "GitHub",
 
@@ -268,15 +288,35 @@ export const strings = {
       },
       {
         year: "2025",
-        title: "Fullstack mini projects",
-        body: "Shipped fullstack mini projects — POS, Kanban board, Bookshop API, Mini Culture and more.",
+        title: "Fullstack projects + internship",
+        body: "Shipped fullstack mini projects (POS, Kanban, Bookshop API) and started my internship at Synergy Global Network (SGN) in June.",
       },
       {
         year: "2026",
-        title: "Production work",
-        body: "Real production work — BlackDiamond (VIP signals platform) and E-Sign (PDF e-signing) on Next.js + NestJS.",
+        title: "Internship wrap-up + production work",
+        body: "Finished my SGN internship on March 7, 2026, then built BlackDiamond solo all the way to production, followed by E-Sign (PDF e-signing).",
       },
     ],
+
+    experienceHeading: "Work experience",
+    expCompany: "Synergy Global Network (SGN)",
+    expRole: "Full-stack Developer (Internship)",
+    expDuration: "Jun 2025 — Mar 7, 2026 · 9 months",
+    expProjects: [
+      {
+        title: "C-HAT V2",
+        body: "Owned the responsive design system across all screen sizes. Built and maintained the mobile app with Flutter alongside the web app with Next.js.",
+      },
+      {
+        title: "CRM Customer Service System",
+        body: "Designed and set up the infrastructure for a CRM system supporting complex customer service workflows.",
+      },
+    ],
+
+    educationHeading: "Education",
+    eduSchool: "Songkhla Rajabhat University",
+    eduStatus: "Year 5 · Term 1 · Expected graduation 2026",
+    eduNote: "Wrapping up the final subject before graduation.",
 
     githubHeading: "GitHub",
     githubSub: "Stats and most-used languages from my commit history.",

@@ -61,6 +61,69 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Experience */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <Reveal as="h2" className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
+            {t("experienceHeading")}
+          </Reveal>
+          <Reveal delay={0.05} className="mt-8 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm">
+            <div className="flex flex-col gap-3 border-b border-[var(--border)] bg-[var(--muted)]/40 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)]">
+                  {t("expCompany")}
+                </h3>
+                <p className="mt-1 text-sm text-[var(--muted-foreground)]">
+                  {t("expRole")}
+                </p>
+              </div>
+              <span className="inline-flex w-fit items-center rounded-full border border-[var(--border)] bg-[var(--background)] px-3 py-1 font-mono text-[11px] text-[var(--muted-foreground)]">
+                {t("expDuration")}
+              </span>
+            </div>
+            <ul className="divide-y divide-[var(--border)]">
+              {t("expProjects").map((p, i) => (
+                <li key={p.title} className="flex gap-4 p-5">
+                  <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[var(--primary)]/10 font-mono text-[11px] font-semibold text-[var(--primary)]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h4 className="font-semibold text-[var(--foreground)]">
+                      {p.title}
+                    </h4>
+                    <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                      {p.body}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="border-t border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24">
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <Reveal as="h2" className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
+            {t("educationHeading")}
+          </Reveal>
+          <Reveal delay={0.05} className="mt-8 flex flex-col gap-3 rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 className="text-lg font-bold tracking-tight text-[var(--foreground)]">
+                {t("eduSchool")}
+              </h3>
+              <p className="mt-1 text-sm text-[var(--muted-foreground)]">
+                {t("eduNote")}
+              </p>
+            </div>
+            <span className="inline-flex w-fit items-center rounded-full border border-[var(--border)] bg-[var(--muted)]/50 px-3 py-1 font-mono text-[11px] text-[var(--muted-foreground)]">
+              {t("eduStatus")}
+            </span>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Journey timeline */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
