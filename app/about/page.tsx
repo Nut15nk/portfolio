@@ -6,12 +6,6 @@ import { Reveal } from "@/components/Reveal";
 import { SkillsGrid } from "@/components/SkillsGrid";
 import { GithubIcon, MailIcon, ArrowRightIcon } from "@/components/Icons";
 
-// Base URL for the github-readme-stats instance. The public deployment
-// (github-readme-stats.vercel.app) is frequently rate-limited and returns 503,
-// so point this at your own Vercel fork via NEXT_PUBLIC_GH_STATS_BASE.
-const GH_STATS_BASE =
-  process.env.NEXT_PUBLIC_GH_STATS_BASE || "https://github-readme-stats.vercel.app";
-
 export default function AboutPage() {
   const { t } = useT();
 
@@ -187,34 +181,6 @@ export default function AboutPage() {
             </p>
           </Reveal>
           <SkillsGrid />
-        </div>
-      </section>
-
-      {/* GitHub */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-4 md:px-6">
-          <Reveal as="h2" className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
-            {t("githubHeading")}
-          </Reveal>
-          <Reveal delay={0.05} as="p" className="mt-3 max-w-2xl text-[var(--muted-foreground)] md:text-lg">
-            {t("githubSub")}
-          </Reveal>
-          <Reveal delay={0.1} className="mt-8 grid gap-4 md:grid-cols-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`${GH_STATS_BASE}/api?username=Nut15nk&show_icons=true&hide_border=true&bg_color=00000000&title_color=2563eb&text_color=475569&icon_color=2563eb&count_private=true`}
-              alt="GitHub stats"
-              loading="lazy"
-              className="w-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-2 shadow-sm"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`${GH_STATS_BASE}/api/top-langs/?username=Nut15nk&hide_border=true&bg_color=00000000&title_color=2563eb&text_color=475569&layout=compact`}
-              alt="Top languages"
-              loading="lazy"
-              className="w-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-2 shadow-sm"
-            />
-          </Reveal>
         </div>
       </section>
 

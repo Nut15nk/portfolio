@@ -165,8 +165,6 @@ export const strings = {
     eduStatus: "คาดว่าจะจบในปี 2026",
     eduNote: "กำลังเรียนวิชาสุดท้ายก่อนจบ",
 
-    githubHeading: "GitHub",
-    githubSub: "สถิติและภาษาที่ใช้บ่อยจาก commit history",
 
     contactHeading: "ติดต่อ",
     contactSub: "อยากทำงานร่วมกัน? ทักมาได้เลยครับ",
@@ -320,8 +318,6 @@ export const strings = {
     eduStatus: "Expected graduation 2026",
     eduNote: "Wrapping up the final subject before graduation.",
 
-    githubHeading: "GitHub",
-    githubSub: "Stats and most-used languages from my commit history.",
 
     contactHeading: "Contact",
     contactSub: "Want to work together? Reach out.",

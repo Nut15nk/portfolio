@@ -41,7 +41,6 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.base.outputs.value }}
-          NEXT_PUBLIC_GH_STATS_BASE: ${{ vars.GH_STATS_BASE }}
 
       - uses: actions/configure-pages@v5
 
