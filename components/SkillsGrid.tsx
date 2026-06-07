@@ -34,7 +34,6 @@ const groups: Group[] = [
       { name: "TypeScript", si: "typescript", color: "3178C6" },
       { name: "JavaScript", si: "javascript", color: "F7DF1E" },
       { name: "Python", si: "python", color: "3776AB" },
-      { name: "PHP", si: "php", color: "777BB4" },
       { name: "Java", dev: "java" },
       { name: "C", dev: "c" },
     ],
