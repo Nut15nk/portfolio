@@ -81,7 +81,7 @@ const jsonLd = {
   alternateName: "นัควัต จู",
   url: SITE,
   jobTitle: "Full-stack Developer",
-  email: "mailto:nakavat15553@gmail.com",
+  email: "mailto:nakavat.w1@gmail.com",
   nationality: "Thai",
   alumniOf: {
     "@type": "CollegeOrUniversity",

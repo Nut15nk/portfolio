@@ -67,16 +67,11 @@ export const strings = {
     navSkills: "ทักษะ",
     navGithub: "GitHub",
 
-    heroEyebrow: "Full-stack Developer · ประเทศไทย",
+    heroEyebrow: "Full-stack Developer",
     heroStatus: "เปิดรับงานใหม่",
     heroHi: "สวัสดีครับ ผมชื่อ",
     heroName: "นัควัต จู",
-    heroRoles: [
-      "Full-stack Developer",
-      "Next.js + NestJS Engineer",
-      "TypeScript Enthusiast",
-      "นักสร้างบอทอัตโนมัติ",
-    ],
+    heroRole: "Full-stack Developer",
     heroDesc:
       "ผมพัฒนาเว็บแอปจริงตั้งแต่ frontend ถึง backend สแตกที่ใช้บ่อยคือ Next.js + NestJS เคยฝึกงาน 9 เดือนที่ SGN ทำทั้งแอป Flutter เว็บ Next.js และวางระบบ CRM infrastructure",
     heroCtaProjects: "ดูผลงาน",
@@ -96,6 +91,7 @@ export const strings = {
     skillsTabFront: "Frontend",
     skillsTabBack: "Backend",
     skillsTabData: "Database",
+    skillsTabTools: "เครื่องมือ",
 
     aboutHeading: "เกี่ยวกับผม",
     aboutEyebrow: "About",
@@ -219,16 +215,11 @@ export const strings = {
     navSkills: "Skills",
     navGithub: "GitHub",
 
-    heroEyebrow: "Full-stack Developer · Thailand",
+    heroEyebrow: "Full-stack Developer",
     heroStatus: "Open to work",
     heroHi: "Hi, I'm",
     heroName: "Nakhawat Ju",
-    heroRoles: [
-      "Full-stack Developer",
-      "Next.js + NestJS Engineer",
-      "TypeScript Enthusiast",
-      "Bot Automation Builder",
-    ],
+    heroRole: "Full-stack Developer",
     heroDesc:
       "I build production web apps end-to-end. My go-to stack is Next.js + NestJS. Spent 9 months interning at SGN — Flutter mobile, Next.js web and CRM infrastructure.",
     heroCtaProjects: "View my work",
@@ -249,6 +240,7 @@ export const strings = {
     skillsTabFront: "Frontend",
     skillsTabBack: "Backend",
     skillsTabData: "Database",
+    skillsTabTools: "Tools",
 
     aboutHeading: "About me",
     aboutEyebrow: "About",

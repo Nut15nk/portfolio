@@ -23,7 +23,12 @@ function iconUrl(s: Skill): string {
 }
 
 type Group = {
-  labelKey: "skillsTabLang" | "skillsTabFront" | "skillsTabBack" | "skillsTabData";
+  labelKey:
+    | "skillsTabLang"
+    | "skillsTabFront"
+    | "skillsTabBack"
+    | "skillsTabData"
+    | "skillsTabTools";
   items: Skill[];
 };
 
@@ -61,6 +66,14 @@ const groups: Group[] = [
       { name: "MongoDB", si: "mongodb", color: "47A248" },
       { name: "MySQL", si: "mysql", color: "4479A1" },
       { name: "Redis", si: "redis", color: "FF4438" },
+    ],
+  },
+  {
+    labelKey: "skillsTabTools",
+    items: [
+      { name: "Git", si: "git", color: "F05032" },
+      { name: "GitHub", dev: "github" },
+      { name: "Docker", si: "docker", color: "2496ED" },
     ],
   },
 ];

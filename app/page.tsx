@@ -2,7 +2,6 @@
 
 import { useT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
-import { RotatingText } from "@/components/RotatingText";
 import { CodeCard } from "@/components/CodeCard";
 import { StatusBadge } from "@/components/StatusBadge";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -50,7 +49,7 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={0.15} className="h-9 sm:h-10 text-2xl sm:text-3xl font-semibold text-[var(--primary)]">
-              <RotatingText items={t("heroRoles")} />
+              {t("heroRole")}
             </Reveal>
 
             <Reveal delay={0.2} as="p" className="max-w-[620px] text-base leading-relaxed text-[var(--muted-foreground)] md:text-lg">
@@ -87,7 +86,7 @@ export default function Home() {
                 <GithubIcon className="h-5 w-5" />
               </a>
               <a
-                href="mailto:nakavat15553@gmail.com"
+                href="mailto:nakavat.w1@gmail.com"
                 aria-label="Email"
                 className="rounded-full border border-[var(--border)] p-2 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--accent)] hover:text-[var(--foreground)]"
               >

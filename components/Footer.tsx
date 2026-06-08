@@ -20,7 +20,7 @@ export function Footer() {
             <GithubIcon className="h-4 w-4" />
           </a>
           <a
-            href="mailto:nakavat15553@gmail.com"
+            href="mailto:nakavat.w1@gmail.com"
             aria-label="Email"
             className="rounded-full p-2 transition-colors hover:bg-[var(--accent)] hover:text-[var(--foreground)]"
           >

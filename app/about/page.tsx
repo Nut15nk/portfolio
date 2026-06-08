@@ -217,7 +217,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.15}>
               <a
-                href="mailto:nakavat15553@gmail.com"
+                href="mailto:nakavat.w1@gmail.com"
                 className="group flex items-center gap-4 rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm transition-all hover:border-[var(--primary)]/40 hover:shadow-md"
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--muted)] text-[var(--foreground)]">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                     {t("contactEmailLabel")}
                   </div>
                   <div className="text-sm font-medium text-[var(--foreground)]">
-                    nakavat15553@gmail.com
+                    nakavat.w1@gmail.com
                   </div>
                 </div>
                 <ArrowRightIcon className="h-4 w-4 text-[var(--muted-foreground)] transition-transform group-hover:translate-x-0.5 group-hover:text-[var(--primary)]" />
