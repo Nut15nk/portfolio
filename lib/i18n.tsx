@@ -66,6 +66,7 @@ export const strings = {
     navAbout: "เกี่ยวกับ",
     navSkills: "ทักษะ",
     navGithub: "GitHub",
+    navMenu: "เมนู",
 
     heroEyebrow: "Full-stack Developer",
     heroStatus: "เปิดรับงานใหม่",
@@ -174,7 +175,8 @@ export const strings = {
     backend: "Backend",
     bots: "บอท",
     frontendPreview: "ตัวอย่างหน้าจอ",
-    sourcePrivate: "ซอร์สโค้ดเป็น private — ใส่ภาพ placeholder ไว้ก่อน",
+    sourcePrivate:
+      "โค้ดอยู่ในรีโป production แบบ private — ดูสถาปัตยกรรมระบบด้านบนได้เลย หรือทักมาขอชมเดโมส่วนตัวได้",
 
     bdTitle: "BlackDiamond",
     bdHero:
@@ -214,6 +216,7 @@ export const strings = {
     navAbout: "About",
     navSkills: "Skills",
     navGithub: "GitHub",
+    navMenu: "Menu",
 
     heroEyebrow: "Full-stack Developer",
     heroStatus: "Open to work",
@@ -323,7 +326,8 @@ export const strings = {
     backend: "Backend",
     bots: "Bots",
     frontendPreview: "Frontend preview",
-    sourcePrivate: "Source is private — placeholders shown.",
+    sourcePrivate:
+      "The code lives in a private production repo — explore the architecture above, or reach out for a personal demo.",
 
     bdTitle: "BlackDiamond",
     bdHero:
