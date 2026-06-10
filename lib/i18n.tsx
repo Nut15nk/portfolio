@@ -78,7 +78,7 @@ export const strings = {
     heroCtaProjects: "ดูผลงาน",
     heroCtaGithub: "GitHub",
 
-    projectsHeading: "ผลงานเด่น",
+    projectsHeading: "ผลงาน",
     projectsSub: "งานปี 2026 — ครอบคลุมทั้ง frontend, backend และบอทอัตโนมัติ",
     viewDetails: "ดูรายละเอียด",
     visitSite: "เข้าชมเว็บไซต์จริง",
@@ -212,7 +212,7 @@ export const strings = {
     heroCtaProjects: "View my work",
     heroCtaGithub: "GitHub",
 
-    projectsHeading: "Featured projects",
+    projectsHeading: "Projects",
     projectsSub:
       "2026 — production work spanning frontend, backend, and bot automation.",
     viewDetails: "View details",

@@ -141,6 +141,12 @@ export default function BlackDiamondCaseStudy() {
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
             {
+              src: `${BASE}/projects/blackdiamond/main.png`,
+              w: 1888,
+              h: 1037,
+              label: "Landing · open a broker to unlock VIP signals",
+            },
+            {
               src: `${BASE}/projects/blackdiamond/vip.png`,
               w: 1896,
               h: 1032,
