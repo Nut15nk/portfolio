@@ -81,10 +81,9 @@ export const strings = {
     projectsHeading: "ผลงานเด่น",
     projectsSub: "งานปี 2026 — ครอบคลุมทั้ง frontend, backend และบอทอัตโนมัติ",
     viewDetails: "ดูรายละเอียด",
+    visitSite: "เข้าชมเว็บไซต์จริง",
     bdTagline:
       "แพลตฟอร์มสัญญาณเทรด VIP ระบบเก็บเงินผ่าน Stripe/PayPal เว็บหลายภาษา และบอท Telegram + Discord ที่เพิ่ม/ถอนสิทธิ์ผู้ใช้อัตโนมัติเมื่อแพลนเปลี่ยน",
-    esTagline:
-      "ระบบเซ็นเอกสาร PDF ครบวงจร: อัปโหลด ลากวางลายเซ็น เซ็นจริงด้วย pdf-lib พร้อม JWT auth และเก็บไฟล์บน AWS S3",
 
     skillsHeading: "ทักษะและเครื่องมือ",
     skillsSub: "เทคโนโลยีที่ผมใช้บ่อยในงานจริง",
@@ -195,21 +194,6 @@ export const strings = {
       "NestJS แยกโมดูล auth, products, cart, orders, payment, signals, affiliate/IB, broker submissions, mail, admin และ bot triggers พร้อม helmet และ rate limit",
     bdBotsDesc:
       "Python 2 service ฟัง endpoint aiohttp ที่ NestJS เรียก พร้อม poll backend ตามเวลาเพื่อสำรองความถูกต้อง",
-
-    esTitle: "E-Sign",
-    esHero:
-      "ระบบเซ็นเอกสาร PDF แบบ self-serve อัปโหลดเอกสาร วาดลายเซ็น ลากไปวางตรงหน้าที่ต้องการ แล้วโหลด PDF ที่เซ็นแล้วได้ทันที — ไม่ผ่านบริการเซ็นภายนอก",
-    esFeatures: [
-      "Flow auth — สมัคร, ล็อกอิน, ลืมรหัส, ตั้งรหัสใหม่ ใช้ JWT จาก NestJS เก็บใน cookie ผ่าน js-cookie ฝั่ง backend ใช้ Passport local + JWT",
-      "อัปโหลดเอกสาร — ไฟล์ผ่าน Multer แล้วเก็บลง AWS S3 ใช้ presigned URL เพื่อให้ไฟล์ private แต่เจ้าของยังเข้าถึงได้",
-      "ขั้นตอนเซ็น — react-pdf แสดงเอกสาร, react-signature-canvas รับลายเซ็น, react-draggable ให้ลากวางตรงไหนของหน้าก็ได้",
-      "เซ็นจริง — backend ใช้ pdf-lib + @pdf-lib/fontkit ฝังภาพลายเซ็นที่พิกัดที่ผู้ใช้เลือก แล้ว save PDF ใหม่กลับ S3",
-      "ส่งอีเมลแจ้งเตือนสำหรับ reset password และเหตุการณ์เซ็น ผ่านโมดูล mailer ของ NestJS",
-    ],
-    esFrontendDesc:
-      "Next.js App Router มีหน้า auth public และกลุ่ม (system) สำหรับ workspace เซ็นเอกสาร",
-    esBackendDesc:
-      "NestJS แยกโมดูล auth, users, documents ใช้ MySQL ผ่าน TypeORM เก็บไฟล์บน S3 และใช้ pdf-lib เซ็นจริง",
   },
   en: {
     navProjects: "Projects",
@@ -232,10 +216,9 @@ export const strings = {
     projectsSub:
       "2026 — production work spanning frontend, backend, and bot automation.",
     viewDetails: "View details",
+    visitSite: "Visit live site",
     bdTagline:
       "VIP forex signals platform with Stripe/PayPal billing, multi-language frontend, and Telegram + Discord bots that grant or revoke access automatically when plans change.",
-    esTagline:
-      "End-to-end PDF e-signature flow: upload, drag-and-drop signatures onto pages, sign with pdf-lib, JWT auth, and AWS S3 storage.",
 
     skillsHeading: "Skills & toolbox",
     skillsSub: "The technologies I use most in production work.",
@@ -346,20 +329,5 @@ export const strings = {
       "NestJS modules for auth, products, cart, orders, payment, signals, affiliate/IB, broker submissions, mail, admin, and bot triggers. Throttled and helmeted.",
     bdBotsDesc:
       "Two Python services. Each listens on aiohttp endpoints called by NestJS, plus polls the backend on a timer as a safety net.",
-
-    esTitle: "E-Sign",
-    esHero:
-      "A self-serve PDF e-signature workflow. Upload a document, draw your signature, drag it onto the right page, and download a real signed PDF — no third-party signing service in the loop.",
-    esFeatures: [
-      "Auth flow — register, login, forgot password, reset password. JWT issued by NestJS, persisted via js-cookie. Passport local + JWT strategies on the backend.",
-      "Document upload — files go through Multer in NestJS and are stored in AWS S3. Presigned URLs keep documents private but accessible to the owner.",
-      "Sign step — react-pdf renders the document, react-signature-canvas captures the signature image, and react-draggable lets users place it anywhere on the page.",
-      "Real signing — backend re-opens the PDF with pdf-lib + @pdf-lib/fontkit, embeds the signature at the requested coordinates, and writes a new PDF back to S3.",
-      "Email notifications for password reset and signing events via the NestJS mailer module.",
-    ],
-    esFrontendDesc:
-      "Next.js App Router. Public auth pages plus an authenticated (system) group with the signing workspace.",
-    esBackendDesc:
-      "NestJS modules: auth, users, documents. MySQL via TypeORM. S3 for blobs, pdf-lib for actual signing.",
   },
 } as const;

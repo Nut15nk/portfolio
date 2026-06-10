@@ -116,7 +116,7 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="mx-auto grid max-w-md gap-6">
             <Reveal delay={0.05}>
               <ProjectCard
                 slug="blackdiamond"
@@ -127,20 +127,6 @@ export default function Home() {
                     label="BlackDiamond · VIP Signals"
                     from="#dbeafe"
                     to="#ede9fe"
-                  />
-                }
-              />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <ProjectCard
-                slug="e-sign"
-                title="E-Sign"
-                year="2026"
-                cover={
-                  <Placeholder
-                    label="E-Sign · PDF Signing"
-                    from="#e0e7ff"
-                    to="#cffafe"
                   />
                 }
               />

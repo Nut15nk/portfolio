@@ -5,6 +5,9 @@ import { useT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
 import { TechBadge } from "@/components/TechBadge";
 import { Placeholder } from "@/components/Placeholder";
+import { ExternalLinkIcon } from "@/components/Icons";
+
+const SITE_URL = "https://blackdiamondgroup.club";
 
 const frontendStack = [
   "Next.js 16",
@@ -57,6 +60,25 @@ export default function BlackDiamondCaseStudy() {
         <p className="mt-4 text-base leading-relaxed text-[var(--muted-foreground)] md:text-lg">
           {t("bdHero")}
         </p>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <a
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[var(--primary)] px-5 text-sm font-medium text-[var(--primary-foreground)] shadow-sm transition-all hover:bg-[var(--primary)]/90"
+          >
+            {t("visitSite")}
+            <ExternalLinkIcon className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </a>
+          <a
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--primary)]"
+          >
+            blackdiamondgroup.club
+          </a>
+        </div>
       </Reveal>
 
       <Reveal delay={0.05} className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
