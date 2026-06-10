@@ -130,7 +130,7 @@ export const strings = {
       },
       {
         year: "2025",
-        title: "ฟูลสแตก mini projects + เริ่มฝึกงาน",
+        title: "FullStackDeveloper mini projects + เริ่มฝึกงาน",
         body: "ทำโปรเจกต์ฟูลสแตกหลายตัว (POS, Kanban, Bookshop API) และเริ่มฝึกงานที่ Synergy Global Network (SGN) ในเดือนมิถุนายน",
       },
       {
@@ -265,7 +265,7 @@ export const strings = {
       },
       {
         year: "2025",
-        title: "Fullstack projects + internship",
+        title: "FullStackDeveloper mini projects + internship",
         body: "Shipped fullstack mini projects (POS, Kanban, Bookshop API) and started my internship at Synergy Global Network (SGN) in June.",
       },
       {
