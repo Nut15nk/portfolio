@@ -136,7 +136,7 @@ export const strings = {
       {
         year: "2026",
         title: "จบฝึกงาน + production work",
-        body: "จบฝึกงาน SGN เมื่อ 7 มี.ค. 2026 จากนั้นพัฒนา BlackDiamond ขึ้นมาเองคนเดียวจนกลายเป็น production และต่อด้วย E-Sign (PDF e-signing)",
+        body: "จบฝึกงาน SGN เมื่อ 7 มี.ค. 2026 จากนั้นพัฒนา BlackDiamond ขึ้นมาเองคนเดียวจนกลายเป็น production",
       },
     ],
 
@@ -271,7 +271,7 @@ export const strings = {
       {
         year: "2026",
         title: "Internship wrap-up + production work",
-        body: "Finished my SGN internship on March 7, 2026, then built BlackDiamond solo all the way to production, followed by E-Sign (PDF e-signing).",
+        body: "Finished my SGN internship on March 7, 2026, then built BlackDiamond solo all the way to production.",
       },
     ],
 
