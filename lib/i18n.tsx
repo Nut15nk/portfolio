@@ -83,7 +83,7 @@ export const strings = {
     viewDetails: "ดูรายละเอียด",
     visitSite: "เข้าชมเว็บไซต์จริง",
     bdTagline:
-      "แพลตฟอร์มสัญญาณเทรด VIP ระบบเก็บเงินผ่าน Stripe/PayPal เว็บหลายภาษา และบอท Telegram + Discord ที่เพิ่ม/ถอนสิทธิ์ผู้ใช้อัตโนมัติเมื่อแพลนเปลี่ยน",
+      "แพลตฟอร์มสัญญาณเทรด VIP ปลดล็อกสิทธิ์ผ่านโบรกเกอร์พาร์ตเนอร์ (IB) เว็บหลายภาษา และบอท Telegram + Discord ที่เพิ่ม/ถอนสิทธิ์ผู้ใช้อัตโนมัติเมื่อสถานะเปลี่ยน",
 
     skillsHeading: "ทักษะและเครื่องมือ",
     skillsSub: "เทคโนโลยีที่ผมใช้บ่อยในงานจริง",
@@ -179,11 +179,11 @@ export const strings = {
 
     bdTitle: "BlackDiamond",
     bdHero:
-      "แพลตฟอร์มสัญญาณเทรด VIP ผู้ใช้ปลดล็อกสิทธิ์ VIP ได้ทั้งแบบชำระเงินหรือเปิดบัญชีโบรกเกอร์ผ่านลิงก์พาร์ตเนอร์ (IB) จากนั้นระบบจะเพิ่มสิทธิ์เข้ากลุ่ม Telegram/Discord ให้อัตโนมัติ และถอนสิทธิ์เมื่อหมดเงื่อนไข",
+      "แพลตฟอร์มสัญญาณเทรด VIP ผู้ใช้ปลดล็อกสิทธิ์ VIP โดยเปิดบัญชีโบรกเกอร์ผ่านลิงก์พาร์ตเนอร์ (IB) จากนั้นระบบจะเพิ่มสิทธิ์เข้ากลุ่ม Telegram/Discord ให้อัตโนมัติ และถอนสิทธิ์เมื่อหมดเงื่อนไข",
     bdFeatures: [
-      "ชำระเงิน VIP ผ่าน Stripe และ PayPal (live) — จัดการ success/failure และส่งอีเมล (OTP, ใบเสร็จ) ด้วย Nodemailer ผ่าน Gmail",
+      "วางระบบชำระเงิน Stripe และ PayPal ไว้ในแพลตฟอร์ม (ปัจจุบันปิดการขายแบบจ่ายเงิน) — จัดการ success/failure และส่งอีเมล (OTP, ใบเสร็จ) ด้วย Nodemailer ผ่าน Gmail",
       "จัดการสิทธิ์อัตโนมัติ — backend NestJS มี endpoint /trigger-grant และ /trigger-revoke ให้บอท Python เรียก แล้วบอทจะ add/kick ผู้ใช้ในกลุ่ม Telegram VIP และ Discord VIP role ทันที พร้อม poll สำรอง",
-      "ปลดล็อก VIP ผ่านโบรกเกอร์พาร์ตเนอร์ — ผู้ใช้เปิดบัญชีผ่านลิงก์ IB (เช่น ACY Securities) แล้วส่งยืนยัน เทรดราว 1 lot/เดือนเพื่อคงสิทธิ์ ไม่ต้องสมัครสมาชิกรายเดือน",
+      "ปลดล็อก VIP ผ่านโบรกเกอร์พาร์ตเนอร์ (ช่องทางหลักปัจจุบัน) — ผู้ใช้เปิดบัญชีผ่านลิงก์ IB (เช่น ACY Securities) แล้วส่งยืนยัน เทรดราว 1 lot/เดือนเพื่อคงสิทธิ์ ไม่ต้องสมัครสมาชิกรายเดือน",
       "ระบบ Affiliate / IB พร้อม referral และเครื่องมือ admin (orders, signals, partnerships, maintenance)",
       "เว็บหลายภาษา ใช้ Next.js app/[lang] routing",
       "Bridge ข้อความ — ข้อความจากกลุ่ม Telegram VIP/Free ถูก forward ไปยังช่อง Discord แบบ real time",
@@ -218,7 +218,7 @@ export const strings = {
     viewDetails: "View details",
     visitSite: "Visit live site",
     bdTagline:
-      "VIP forex signals platform with Stripe/PayPal billing, multi-language frontend, and Telegram + Discord bots that grant or revoke access automatically when plans change.",
+      "VIP forex signals platform — access unlocked through partner brokers (IB), multi-language frontend, and Telegram + Discord bots that grant or revoke access automatically when status changes.",
 
     skillsHeading: "Skills & toolbox",
     skillsSub: "The technologies I use most in production work.",
@@ -314,11 +314,11 @@ export const strings = {
 
     bdTitle: "BlackDiamond",
     bdHero:
-      "A VIP forex-signals platform. Members unlock VIP either by paying or by opening a broker account through a partner IB link — the backend then grants Telegram/Discord access automatically and revokes it the moment eligibility lapses.",
+      "A VIP forex-signals platform. Members unlock VIP by opening a broker account through a partner IB link — the backend then grants Telegram/Discord access automatically and revokes it the moment eligibility lapses.",
     bdFeatures: [
-      "Payments via Stripe and PayPal (live) — checkout, success/failure handling, and transactional email (OTP, receipts) sent with Nodemailer over Gmail.",
+      "Stripe and PayPal billing built into the platform (paid plan currently disabled) — checkout, success/failure handling, and transactional email (OTP, receipts) sent with Nodemailer over Gmail.",
       "Auto access management — NestJS exposes /trigger-grant and /trigger-revoke. Python bots add or kick users from Telegram VIP and Discord VIP role in real time, with a periodic poll as a safety net.",
-      "Broker-partner unlock — users open an account through partner IB links (e.g. ACY Securities) and submit for verification to unlock VIP signals; keep ~1 lot/month to retain access, no subscription required.",
+      "Broker-partner unlock (current primary path) — users open an account through partner IB links (e.g. ACY Securities) and submit for verification to unlock VIP signals; keep ~1 lot/month to retain access, no subscription required.",
       "Affiliate / IB program with referrals, plus admin tools for orders, signals, partnerships, and maintenance.",
       "Multi-language frontend using Next.js app/[lang] routing.",
       "Message bridge — text from Telegram VIP/Free groups is forwarded to Discord channels in real time.",
