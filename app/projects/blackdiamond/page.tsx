@@ -24,12 +24,14 @@ const frontendStack = [
 
 const backendStack = [
   "NestJS 11",
-  "MongoDB · Mongoose",
-  "Redis · cache + session",
-  "Stripe API",
-  "Resend · email",
+  "MongoDB Atlas · Mongoose",
+  "Redis · session + cache",
+  "OTP auth · express-session",
+  "Stripe + PayPal",
+  "Nodemailer · Gmail",
   "Cloudinary",
   "Helmet · Throttler",
+  "Cloudflare Tunnel",
 ];
 
 const botStack = [

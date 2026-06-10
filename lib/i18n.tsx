@@ -179,11 +179,11 @@ export const strings = {
 
     bdTitle: "BlackDiamond",
     bdHero:
-      "แพลตฟอร์มสัญญาณเทรด VIP แบบสมัครสมาชิก ผู้ใช้ซื้อแพลน แล้วระบบเพิ่มสิทธิ์เข้ากลุ่ม Telegram/Discord ให้อัตโนมัติ พร้อมถอนสิทธิ์ทันทีเมื่อแพลนหมด",
+      "แพลตฟอร์มสัญญาณเทรด VIP ผู้ใช้ปลดล็อกสิทธิ์ VIP ได้ทั้งแบบชำระเงินหรือเปิดบัญชีโบรกเกอร์ผ่านลิงก์พาร์ตเนอร์ (IB) จากนั้นระบบจะเพิ่มสิทธิ์เข้ากลุ่ม Telegram/Discord ให้อัตโนมัติ และถอนสิทธิ์เมื่อหมดเงื่อนไข",
     bdFeatures: [
-      "เก็บเงินค่าแพลน VIP ผ่าน Stripe และ PayPal — มี subscription, จัดการ success/failure, ส่งใบเสร็จและอีเมลด้วย Resend",
+      "ชำระเงิน VIP ผ่าน Stripe และ PayPal (live) — จัดการ success/failure และส่งอีเมล (OTP, ใบเสร็จ) ด้วย Nodemailer ผ่าน Gmail",
       "จัดการสิทธิ์อัตโนมัติ — backend NestJS มี endpoint /trigger-grant และ /trigger-revoke ให้บอท Python เรียก แล้วบอทจะ add/kick ผู้ใช้ในกลุ่ม Telegram VIP และ Discord VIP role ทันที พร้อม poll สำรอง",
-      "Broker submissions สำหรับ Exness และ XM — ผู้ใช้ผูกบัญชีโบรกเกอร์เพื่อปลดล็อกแพลนฟรี",
+      "ปลดล็อก VIP ผ่านโบรกเกอร์พาร์ตเนอร์ — ผู้ใช้เปิดบัญชีผ่านลิงก์ IB (เช่น ACY Securities) แล้วส่งยืนยัน เทรดราว 1 lot/เดือนเพื่อคงสิทธิ์ ไม่ต้องสมัครสมาชิกรายเดือน",
       "ระบบ Affiliate / IB พร้อม referral และเครื่องมือ admin (orders, signals, partnerships, maintenance)",
       "เว็บหลายภาษา ใช้ Next.js app/[lang] routing",
       "Bridge ข้อความ — ข้อความจากกลุ่ม Telegram VIP/Free ถูก forward ไปยังช่อง Discord แบบ real time",
@@ -191,7 +191,7 @@ export const strings = {
     bdFrontendDesc:
       "Next.js App Router รองรับหลายภาษา ใช้ server component สำหรับหน้า marketing และ client island สำหรับหน้า checkout + animation",
     bdBackendDesc:
-      "NestJS แยกโมดูล auth, products, cart, orders, payment, signals, affiliate/IB, broker submissions, mail, admin และ bot triggers พร้อม helmet และ rate limit",
+      "NestJS แยกโมดูล auth, products, cart, orders, payment, signals, affiliate/IB, broker submissions, mail, admin และ bot triggers ยืนยันตัวตนด้วย OTP ทางอีเมล + เซสชันเก็บใน Redis (ไม่ใช้ JWT) พร้อม helmet และ rate limit เปิดสู่อินเทอร์เน็ตผ่าน Cloudflare Tunnel",
     bdBotsDesc:
       "Python 2 service ฟัง endpoint aiohttp ที่ NestJS เรียก พร้อม poll backend ตามเวลาเพื่อสำรองความถูกต้อง",
   },
@@ -314,11 +314,11 @@ export const strings = {
 
     bdTitle: "BlackDiamond",
     bdHero:
-      "A subscription-based VIP forex signals platform. Users buy plans, the system grants them VIP access in Telegram/Discord automatically, then revokes it the moment a plan ends.",
+      "A VIP forex-signals platform. Members unlock VIP either by paying or by opening a broker account through a partner IB link — the backend then grants Telegram/Discord access automatically and revokes it the moment eligibility lapses.",
     bdFeatures: [
-      "VIP plan billing via Stripe and PayPal — checkout with subscriptions, success/failure handling, invoice + receipt email through Resend.",
+      "Payments via Stripe and PayPal (live) — checkout, success/failure handling, and transactional email (OTP, receipts) sent with Nodemailer over Gmail.",
       "Auto access management — NestJS exposes /trigger-grant and /trigger-revoke. Python bots add or kick users from Telegram VIP and Discord VIP role in real time, with a periodic poll as a safety net.",
-      "Broker submissions for Exness and XM — users link broker accounts to unlock free tiers.",
+      "Broker-partner unlock — users open an account through partner IB links (e.g. ACY Securities) and submit for verification to unlock VIP signals; keep ~1 lot/month to retain access, no subscription required.",
       "Affiliate / IB program with referrals, plus admin tools for orders, signals, partnerships, and maintenance.",
       "Multi-language frontend using Next.js app/[lang] routing.",
       "Message bridge — text from Telegram VIP/Free groups is forwarded to Discord channels in real time.",
@@ -326,7 +326,7 @@ export const strings = {
     bdFrontendDesc:
       "Next.js App Router with i18n, server components for marketing pages, client islands for checkout and animations.",
     bdBackendDesc:
-      "NestJS modules for auth, products, cart, orders, payment, signals, affiliate/IB, broker submissions, mail, admin, and bot triggers. Throttled and helmeted.",
+      "NestJS modules for auth, products, cart, orders, payment, signals, affiliate/IB, broker submissions, mail, admin, and bot triggers. Email-OTP auth with Redis-backed sessions (no JWT), throttled and helmeted, served over a Cloudflare Tunnel.",
     bdBotsDesc:
       "Two Python services. Each listens on aiohttp endpoints called by NestJS, plus polls the backend on a timer as a safety net.",
   },
