@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
 import { TechBadge } from "@/components/TechBadge";
-import { Placeholder } from "@/components/Placeholder";
 import { ExternalLinkIcon } from "@/components/Icons";
 
 const SITE_URL = "https://blackdiamondgroup.club";
@@ -82,9 +82,14 @@ export default function BlackDiamondCaseStudy() {
       </Reveal>
 
       <Reveal delay={0.05} className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
-        <div className="aspect-[16/9]">
-          <Placeholder label="BlackDiamond · landing" from="#dbeafe" to="#ede9fe" />
-        </div>
+        <Image
+          src="/projects/blackdiamond/landing.png"
+          alt="BlackDiamond landing page — Trade smarter with expert signals"
+          width={1888}
+          height={1037}
+          priority
+          className="h-auto w-full"
+        />
       </Reveal>
 
       <Reveal delay={0.1} as="section" className="mt-12">
@@ -132,17 +137,34 @@ export default function BlackDiamondCaseStudy() {
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
-            ["Landing · /[lang]", "#dbeafe", "#ede9fe"],
-            ["Plans · /[lang]/plans", "#e0e7ff", "#ddd6fe"],
-            ["Checkout · Stripe + PayPal", "#fce7f3", "#dbeafe"],
-            ["Brokers · Exness / XM", "#cffafe", "#e0e7ff"],
-          ].map(([label, from, to]) => (
-            <div
-              key={label}
-              className="overflow-hidden rounded-xl border border-[var(--border)] aspect-[16/10] shadow-sm"
+            {
+              src: "/projects/blackdiamond/vip.png",
+              w: 1896,
+              h: 1032,
+              label: "VIP program · open a broker, lifetime access",
+            },
+            {
+              src: "/projects/blackdiamond/broker.png",
+              w: 1889,
+              h: 1032,
+              label: "Broker partners · IB links + verification",
+            },
+          ].map((shot) => (
+            <figure
+              key={shot.src}
+              className="overflow-hidden rounded-xl border border-[var(--border)] shadow-sm"
             >
-              <Placeholder label={label} from={from} to={to} />
-            </div>
+              <Image
+                src={shot.src}
+                alt={shot.label}
+                width={shot.w}
+                height={shot.h}
+                className="h-auto w-full"
+              />
+              <figcaption className="border-t border-[var(--border)] px-3 py-2 font-mono text-[11px] text-[var(--muted-foreground)]">
+                {shot.label}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </Reveal>
