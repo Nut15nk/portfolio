@@ -8,6 +8,7 @@ import { TechBadge } from "@/components/TechBadge";
 import { ExternalLinkIcon } from "@/components/Icons";
 
 const SITE_URL = "https://blackdiamondgroup.club";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const frontendStack = [
   "Next.js 16",
@@ -83,7 +84,7 @@ export default function BlackDiamondCaseStudy() {
 
       <Reveal delay={0.05} className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
         <Image
-          src="/projects/blackdiamond/landing.png"
+          src={`${BASE}/projects/blackdiamond/landing.png`}
           alt="BlackDiamond landing page — Trade smarter with expert signals"
           width={1888}
           height={1037}
@@ -138,13 +139,13 @@ export default function BlackDiamondCaseStudy() {
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {[
             {
-              src: "/projects/blackdiamond/vip.png",
+              src: `${BASE}/projects/blackdiamond/vip.png`,
               w: 1896,
               h: 1032,
               label: "VIP program · open a broker, lifetime access",
             },
             {
-              src: "/projects/blackdiamond/broker.png",
+              src: `${BASE}/projects/blackdiamond/broker.png`,
               w: 1889,
               h: 1032,
               label: "Broker partners · IB links + verification",
