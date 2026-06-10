@@ -1,13 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
 import { CodeCard } from "@/components/CodeCard";
 import { StatusBadge } from "@/components/StatusBadge";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Placeholder } from "@/components/Placeholder";
 import { SkillsGrid } from "@/components/SkillsGrid";
 import { GithubIcon, MailIcon, ArrowRightIcon } from "@/components/Icons";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Home() {
   const { t } = useT();
@@ -123,10 +125,12 @@ export default function Home() {
                 title="BlackDiamond"
                 year="2026"
                 cover={
-                  <Placeholder
-                    label="BlackDiamond · VIP Signals"
-                    from="#dbeafe"
-                    to="#ede9fe"
+                  <Image
+                    src={`${BASE}/projects/blackdiamond/main.png`}
+                    alt="BlackDiamond · VIP forex signals platform"
+                    width={1888}
+                    height={1037}
+                    className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
                   />
                 }
               />
