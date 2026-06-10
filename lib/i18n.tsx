@@ -100,22 +100,6 @@ export const strings = {
     aboutBody:
       "ผมเป็น full-stack developer ที่เน้นส่งของจริงให้ใช้ได้ สแตกหลักตอนนี้คือ Next.js + NestJS บน TypeScript ใช้ MongoDB หรือ MySQL ฝั่ง backend และ Redis สำหรับ cache/session นอกจากนี้ก็เขียนบอท Python เชื่อมระบบ (Telegram, Discord)",
 
-    focusHeading: "ตอนนี้โฟกัสกับ",
-    focusItems: [
-      {
-        title: "Production app",
-        body: "ส่งงานจริงใช้ได้ด้วย Next.js + NestJS + TypeScript",
-      },
-      {
-        title: "Scalable backend",
-        body: "ออกแบบระบบที่ scale ได้ — caching, queueing, third-party integration",
-      },
-      {
-        title: "Bot automation",
-        body: "เขียน Python bot เชื่อม Telegram / Discord กับระบบหลังบ้าน",
-      },
-    ],
-
     journeyHeading: "เส้นทางของผม",
     journey: [
       {
@@ -234,22 +218,6 @@ export const strings = {
     aboutIntroHeading: "Hi, I'm Nakhawat Ju",
     aboutBody:
       "I'm a full-stack developer focused on shipping real products. My recent stack is Next.js + NestJS on TypeScript, with MongoDB or MySQL on the backend, and Redis for caching/sessions. I also write Python bots to glue services together (Telegram, Discord).",
-
-    focusHeading: "Currently focused on",
-    focusItems: [
-      {
-        title: "Production apps",
-        body: "Shipping real-world products with Next.js + NestJS + TypeScript.",
-      },
-      {
-        title: "Scalable backends",
-        body: "Designing systems that scale — caching, queueing, third-party integrations.",
-      },
-      {
-        title: "Bot automation",
-        body: "Writing Python bots that bridge Telegram / Discord with backend services.",
-      },
-    ],
 
     journeyHeading: "My journey",
     journey: [

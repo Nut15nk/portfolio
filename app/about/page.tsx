@@ -35,32 +35,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Current focus */}
-      <section className="border-t border-[var(--border)] bg-[var(--muted)]/50 py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-4 md:px-6">
-          <Reveal as="h2" className="text-3xl font-bold tracking-tighter text-[var(--foreground)] sm:text-4xl">
-            {t("focusHeading")}
-          </Reveal>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {t("focusItems").map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.07}>
-                <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm transition-colors hover:border-[var(--primary)]/40">
-                  <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-md bg-[var(--primary)]/10 font-mono text-xs font-semibold text-[var(--primary)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <h3 className="text-lg font-bold tracking-tight text-[var(--foreground)]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-[var(--muted-foreground)]">
-                    {item.body}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Experience */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
