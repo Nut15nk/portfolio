@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useT } from "@/lib/i18n";
 import { Reveal } from "@/components/Reveal";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { TechBadge } from "@/components/TechBadge";
 import { ExternalLinkIcon } from "@/components/Icons";
 
@@ -85,7 +85,7 @@ export default function BlackDiamondCaseStudy() {
       </Reveal>
 
       <Reveal delay={0.05} className="mt-10 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
-        <Image
+        <ZoomableImage
           src={`${BASE}/projects/blackdiamond/landing.png`}
           alt="BlackDiamond landing page — Trade smarter with expert signals"
           width={1888}
@@ -157,7 +157,7 @@ export default function BlackDiamondCaseStudy() {
               key={shot.src}
               className="overflow-hidden rounded-xl border border-[var(--border)] shadow-sm"
             >
-              <Image
+              <ZoomableImage
                 src={shot.src}
                 alt={shot.label}
                 width={shot.w}
